@@ -10,15 +10,14 @@ import static org.testng.AssertJUnit.assertEquals;
 import static org.testng.AssertJUnit.assertTrue;
 
 public class NewsPageStepsDefinition {
-    private NewsPage newsPage;
+    NewsPage newsPage = new NewsPage();
 
-
-    @When("^Google news page is open$")
+    @When("^Google News page is open$")
     public void open() {
-        this.newsPage.open();
+        newsPage.open();
     }
 
-    @Then("^News Page is successfully loaded")
+    @Then("^News Page is successfully loaded$")
     public void checkPageLoading() {
         assertTrue(newsPage.isLoaded());
     }
