@@ -22,8 +22,8 @@ public class NewsPage {
         return cityName.shouldBe(Condition.visible).getText();
     }
 
-    public String getWeather() {
-        return temperature.shouldBe(Condition.visible).getText();
+    public boolean isWeatherDisplayed() {
+        return temperature.shouldBe(Condition.visible).isDisplayed();
     }
 
     public void open() {
